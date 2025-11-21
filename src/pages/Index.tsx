@@ -40,10 +40,27 @@ const projects = [
 ];
 
 const advantages = [
-  { icon: 'Shield', title: 'Гарантия качества', description: 'Полная гарантия на все виды работ' },
+  { icon: 'Shield', title: 'СНиП / ГОСТ', description: 'Соблюдение всех строительных норм' },
   { icon: 'Clock', title: 'Точные сроки', description: 'Строим в срок по договору' },
   { icon: 'Award', title: 'Опыт 15+ лет', description: 'Построено более 200 домов' },
-  { icon: 'FileCheck', title: 'Под ключ', description: 'Полный цикл строительства' }
+  { icon: 'Factory', title: 'Своя лесопилка', description: 'Низкие цены при высоком качестве' }
+];
+
+const lumberProducts = [
+  { name: 'Доска обрезная', price: 'от 7 000 ₽/м³', icon: 'Box' },
+  { name: 'Вагонка', price: 'от 12 000 ₽/м³', icon: 'Layers' },
+  { name: 'Брус', price: 'от 8 500 ₽/м³', icon: 'PackageOpen' },
+  { name: 'Горбыль', price: 'от 500 ₽/м³', icon: 'Trash2' },
+  { name: 'Дрова для печек', price: 'от 1 500 ₽/м³', icon: 'Flame' },
+];
+
+const repairServices = [
+  { icon: 'Building2', name: 'Вентилируемый фасад', description: 'Монтаж современных фасадных систем' },
+  { icon: 'Droplet', name: 'Системы отопления', description: 'Замена и модернизация отопления' },
+  { icon: 'Waves', name: 'Водоснабжение', description: 'Прокладка водопровода и канализации' },
+  { icon: 'Home', name: 'Замена кровли', description: 'Ремонт и монтаж любых типов кровли' },
+  { icon: 'DoorOpen', name: 'Ремонт подъездов', description: 'Комплексный ремонт МКД' },
+  { icon: 'Wrench', name: 'Технические этажи', description: 'Ремонт и обслуживание техэтажей' },
 ];
 
 export default function Index() {
@@ -92,8 +109,9 @@ export default function Index() {
             </div>
             <div className="hidden md:flex gap-6">
               <a href="#projects" className="story-link hover:text-primary transition-colors">Проекты</a>
-              <a href="#calculator" className="story-link hover:text-primary transition-colors">Калькулятор</a>
-              <a href="#about" className="story-link hover:text-primary transition-colors">О компании</a>
+              <a href="#services" className="story-link hover:text-primary transition-colors">Услуги</a>
+              <a href="#lumber" className="story-link hover:text-primary transition-colors">Пиломатериалы</a>
+              <a href="#mortgage" className="story-link hover:text-primary transition-colors">Ипотека</a>
               <a href="#contacts" className="story-link hover:text-primary transition-colors">Контакты</a>
             </div>
             <Button onClick={() => document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })}>
@@ -119,10 +137,16 @@ export default function Index() {
                   <Icon name="Building2" size={20} className="mr-2" />
                   Смотреть проекты
                 </Button>
-                <Button size="lg" variant="outline" className="text-lg" onClick={() => document.getElementById('calculator')?.scrollIntoView({ behavior: 'smooth' })}>
-                  <Icon name="Calculator" size={20} className="mr-2" />
-                  Рассчитать стоимость
+                <Button size="lg" variant="outline" className="text-lg" asChild>
+                  <a href="tel:+79109420777">
+                    <Icon name="Phone" size={20} className="mr-2" />
+                    +7 (910) 942-07-77
+                  </a>
                 </Button>
+              </div>
+              <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
+                <Icon name="CheckCircle2" size={18} className="text-primary" />
+                <span>Собственная лесопилка — низкие цены при профессиональном качестве</span>
               </div>
             </div>
             <div className="relative">
@@ -294,6 +318,112 @@ export default function Index() {
         </div>
       </section>
 
+      <section id="services" className="py-20 px-4 bg-muted/30">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold font-heading mb-4">Капитальный ремонт зданий</h2>
+            <p className="text-xl text-muted-foreground">Профессиональные строительные услуги для МКД и промышленных объектов</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {repairServices.map((service, index) => (
+              <Card key={index} className="hover-scale">
+                <CardHeader>
+                  <Icon name={service.icon as any} size={40} className="text-primary mb-4" />
+                  <CardTitle className="font-heading">{service.name}</CardTitle>
+                  <CardDescription>{service.description}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <Card className="p-6 bg-primary/5 border-primary/20">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Icon name="BadgeCheck" size={24} className="text-primary" />
+                <p className="text-lg font-semibold">Работаем по СНиП, ГОСТ и СанПиН</p>
+              </div>
+              <p className="text-muted-foreground">Соблюдаем все строительные нормы и правила. Полный пакет документов.</p>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="lumber" className="py-20 px-4">
+        <div className="container mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold font-heading mb-4">Пиломатериалы с собственной лесопилки</h2>
+            <p className="text-xl text-muted-foreground">Высокое качество по доступным ценам. Доставка манипулятором.</p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {lumberProducts.map((product, index) => (
+              <Card key={index} className="hover-scale text-center">
+                <CardHeader>
+                  <Icon name={product.icon as any} size={48} className="mx-auto text-primary mb-4" />
+                  <CardTitle className="font-heading">{product.name}</CardTitle>
+                  <CardDescription className="text-2xl font-bold text-primary mt-2">{product.price}</CardDescription>
+                </CardHeader>
+              </Card>
+            ))}
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card className="p-6">
+              <img 
+                src="https://cdn.poehali.dev/files/3dd60797-4455-4aac-ab2e-ed46f2541f7c.png"
+                alt="Проект дома"
+                className="w-full h-64 object-cover rounded-lg mb-4"
+              />
+              <h3 className="text-xl font-bold font-heading mb-2">Качественные материалы</h3>
+              <p className="text-muted-foreground">Вся продукция производится на собственной лесопилке с соблюдением технологии сушки и обработки.</p>
+            </Card>
+            
+            <Card className="p-6">
+              <div className="h-64 flex flex-col justify-center">
+                <Icon name="Truck" size={64} className="mx-auto text-primary mb-6" />
+                <h3 className="text-xl font-bold font-heading mb-2 text-center">Доставка манипулятором</h3>
+                <p className="text-muted-foreground text-center">Быстрая и удобная доставка пиломатериалов собственным транспортом в любую точку региона.</p>
+                <Button className="mt-6" size="lg" asChild>
+                  <a href="tel:+79109420777">
+                    <Icon name="Phone" size={20} className="mr-2" />
+                    Заказать доставку
+                  </a>
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      <section id="mortgage" className="py-20 px-4 bg-primary text-primary-foreground">
+        <div className="container mx-auto max-w-4xl text-center">
+          <Icon name="Home" size={64} className="mx-auto mb-6" />
+          <h2 className="text-4xl font-bold font-heading mb-4">Ипотека на строительство дома</h2>
+          <p className="text-xl mb-8 opacity-90">
+            Помогаем оформить ипотеку на индивидуальное жилищное строительство. Работаем с ведущими банками России.
+          </p>
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
+              <p className="text-3xl font-bold mb-2">от 8%</p>
+              <p className="opacity-90">Процентная ставка</p>
+            </div>
+            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
+              <p className="text-3xl font-bold mb-2">до 30 лет</p>
+              <p className="opacity-90">Срок кредита</p>
+            </div>
+            <div className="bg-primary-foreground/10 backdrop-blur-sm rounded-lg p-6">
+              <p className="text-3xl font-bold mb-2">от 15%</p>
+              <p className="opacity-90">Первоначальный взнос</p>
+            </div>
+          </div>
+          <Button size="lg" variant="secondary" onClick={() => document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })}>
+            <Icon name="Calculator" size={20} className="mr-2" />
+            Рассчитать ипотеку
+          </Button>
+        </div>
+      </section>
+
       <section id="about" className="py-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center mb-12">
@@ -320,6 +450,13 @@ export default function Index() {
                       <p className="text-muted-foreground">300013, Тульская область, г. Тула, ул. Ш. Руставели, д. 1/13</p>
                     </div>
                   </div>
+                  <div className="flex gap-3">
+                    <Icon name="Phone" size={20} className="text-primary mt-1" />
+                    <div>
+                      <p className="font-semibold">Телефон</p>
+                      <a href="tel:+79109420777" className="text-primary story-link">+7 (910) 942-07-77</a>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div>
@@ -335,15 +472,15 @@ export default function Index() {
                   </li>
                   <li className="flex items-center gap-2">
                     <Icon name="CheckCircle2" size={20} className="text-primary" />
-                    <span>Собственное производство</span>
+                    <span>Собственная лесопилка</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Icon name="CheckCircle2" size={20} className="text-primary" />
-                    <span>Гарантия на все виды работ</span>
+                    <span>Соблюдение СНиП, ГОСТ, СанПиН</span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Icon name="CheckCircle2" size={20} className="text-primary" />
-                    <span>Фиксированная цена в договоре</span>
+                    <span>Низкие цены при высоком качестве</span>
                   </li>
                 </ul>
               </div>
@@ -390,33 +527,58 @@ export default function Index() {
       </section>
 
       <section id="contacts" className="py-20 px-4">
-        <div className="container mx-auto max-w-4xl">
+        <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-heading mb-4">Контакты</h2>
             <p className="text-xl text-muted-foreground">Свяжитесь с нами удобным способом</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <Card className="p-6 text-center hover-scale">
-              <Icon name="Phone" size={40} className="mx-auto mb-4 text-primary" />
-              <h3 className="font-bold font-heading mb-2">Телефон</h3>
-              <a href="tel:+78007007070" className="text-primary story-link">+7 (800) 700-70-70</a>
-              <p className="text-sm text-muted-foreground mt-2">Ежедневно с 9:00 до 21:00</p>
-            </Card>
-            
-            <Card className="p-6 text-center hover-scale">
-              <Icon name="Mail" size={40} className="mx-auto mb-4 text-primary" />
-              <h3 className="font-bold font-heading mb-2">Email</h3>
-              <a href="mailto:info@ecogorod-tula.ru" className="text-primary story-link">info@ecogorod-tula.ru</a>
-              <p className="text-sm text-muted-foreground mt-2">Ответим в течение часа</p>
-            </Card>
-            
-            <Card className="p-6 text-center hover-scale">
-              <Icon name="MapPin" size={40} className="mx-auto mb-4 text-primary" />
-              <h3 className="font-bold font-heading mb-2">Офис</h3>
-              <p className="text-sm">г. Тула</p>
-              <p className="text-sm">ул. Ш. Руставели, 1/13</p>
-              <p className="text-sm text-muted-foreground mt-2">300013</p>
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <div className="space-y-6">
+              <Card className="p-6 hover-scale">
+                <div className="flex items-center gap-4">
+                  <Icon name="Phone" size={40} className="text-primary" />
+                  <div>
+                    <h3 className="font-bold font-heading mb-1">Телефон</h3>
+                    <a href="tel:+79109420777" className="text-xl text-primary story-link">+7 (910) 942-07-77</a>
+                    <p className="text-sm text-muted-foreground mt-1">Ежедневно с 9:00 до 21:00</p>
+                  </div>
+                </div>
+              </Card>
+              
+              <Card className="p-6 hover-scale">
+                <div className="flex items-center gap-4">
+                  <Icon name="Mail" size={40} className="text-primary" />
+                  <div>
+                    <h3 className="font-bold font-heading mb-1">Email</h3>
+                    <a href="mailto:info@ecogorod-tula.ru" className="text-primary story-link">info@ecogorod-tula.ru</a>
+                    <p className="text-sm text-muted-foreground mt-1">Ответим в течение часа</p>
+                  </div>
+                </div>
+              </Card>
+              
+              <Card className="p-6 hover-scale">
+                <div className="flex items-center gap-4">
+                  <Icon name="MapPin" size={40} className="text-primary" />
+                  <div>
+                    <h3 className="font-bold font-heading mb-1">Офис</h3>
+                    <p className="text-sm">300013, Тульская область</p>
+                    <p className="text-sm">г. Тула, ул. Ш. Руставели, д. 1/13</p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <Card className="p-0 overflow-hidden">
+              <iframe
+                src="https://yandex.ru/map-widget/v1/?ll=37.618423%2C54.193122&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE3NzMxMhJP0KDQvtGB0YHQuNGPLCDQotGD0LvQsCwg0YPQu9C40YbQsCDQqNC-0YLQsCDQoNGD0YHRgtCw0LLQtdC70LgsIDEvMTMiCg1e2jVCFUJtXkI%2C&z=17"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allowFullScreen
+                style={{ minHeight: '400px' }}
+                title="Яндекс Карта"
+              />
             </Card>
           </div>
         </div>
@@ -441,9 +603,10 @@ export default function Index() {
             <div>
               <h4 className="font-bold font-heading mb-4">Навигация</h4>
               <ul className="space-y-2 text-sm">
-                <li><a href="#projects" className="story-link text-muted-foreground hover:text-foreground">Проекты</a></li>
-                <li><a href="#calculator" className="story-link text-muted-foreground hover:text-foreground">Калькулятор</a></li>
-                <li><a href="#about" className="story-link text-muted-foreground hover:text-foreground">О компании</a></li>
+                <li><a href="#projects" className="story-link text-muted-foreground hover:text-foreground">Проекты домов</a></li>
+                <li><a href="#services" className="story-link text-muted-foreground hover:text-foreground">Капремонт</a></li>
+                <li><a href="#lumber" className="story-link text-muted-foreground hover:text-foreground">Пиломатериалы</a></li>
+                <li><a href="#mortgage" className="story-link text-muted-foreground hover:text-foreground">Ипотека</a></li>
                 <li><a href="#contacts" className="story-link text-muted-foreground hover:text-foreground">Контакты</a></li>
               </ul>
             </div>
