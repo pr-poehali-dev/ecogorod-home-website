@@ -33,6 +33,20 @@ const projects = [
       'https://cdn.poehali.dev/files/a4f78eab-8d23-439e-ae8f-d5787aaed81f.png',
       'https://cdn.poehali.dev/files/54760c02-6aad-4d70-a3f9-f5dde5a2fe35.png'
     ]
+  },
+  {
+    id: 3,
+    title: 'Современный каркасный дом',
+    description: 'Одноэтажный каркасный дом в стиле хай-тек с панорамными окнами',
+    size: '14,3 × 9,6 м',
+    height: 'Одноэтажный',
+    price: 'от 3 500 000',
+    features: ['Панорамное остекление', 'Хай-тек дизайн', 'Открытая планировка', '3 спальни'],
+    images: [
+      'https://cdn.poehali.dev/files/186170c5-94de-4eb5-8f82-a0854a71b21f.png',
+      'https://cdn.poehali.dev/files/416c7bb3-a4d4-4821-aa47-0fe9affb8942.png',
+      'https://cdn.poehali.dev/files/4109bdb8-7aac-45a4-923c-d618f9766210.png'
+    ]
   }
 ];
 

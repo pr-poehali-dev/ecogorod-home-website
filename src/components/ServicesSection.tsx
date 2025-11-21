@@ -26,9 +26,10 @@ export default function ServicesSection() {
       <section id="services" className="py-20 px-4 bg-muted/30">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-heading mb-4">Капитальный ремонт зданий</h2>
+            <h2 className="text-4xl font-bold font-heading mb-4">Капитальный ремонт зданий <span className="font-extrabold">Работаем с НДС 20%</span></h2>
             <p className="text-xl text-muted-foreground">Профессиональные строительные услуги для МКД и промышленных объектов</p>
-            <p className="text-lg text-muted-foreground mt-2">Работаем с НДС 20% • Собственный материал или давальческая схема</p>
+            <p className="text-lg text-muted-foreground mt-2">Собственный материал или давальческая схема из материала заказчика</p>
+            <p className="text-lg font-semibold text-primary mt-3">Выполненные проекты: Зеленоград, Подольск, Климовск</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
