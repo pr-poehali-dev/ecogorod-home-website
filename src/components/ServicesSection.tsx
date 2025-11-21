@@ -16,7 +16,8 @@ const lumberProducts = [
   { name: 'Вагонка', price: 'от 12 000 ₽/м³', icon: 'Layers' },
   { name: 'Брус', price: 'от 8 500 ₽/м³', icon: 'PackageOpen' },
   { name: 'Горбыль', price: 'от 500 ₽/м³', icon: 'Trash2' },
-  { name: 'Дрова для печек', price: 'от 1 500 ₽/м³', icon: 'Flame' },
+  { name: 'Дрова для печек', price: 'от 2 500 ₽/м³', icon: 'Flame' },
+  { name: 'Опилки', price: 'от 300 ₽/м³', icon: 'Sparkles' },
 ];
 
 export default function ServicesSection() {
@@ -27,6 +28,7 @@ export default function ServicesSection() {
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-heading mb-4">Капитальный ремонт зданий</h2>
             <p className="text-xl text-muted-foreground">Профессиональные строительные услуги для МКД и промышленных объектов</p>
+            <p className="text-lg text-muted-foreground mt-2">Работаем с НДС 20% • Собственный материал или давальческая схема</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -41,13 +43,20 @@ export default function ServicesSection() {
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <div className="mt-12 grid md:grid-cols-2 gap-6">
             <Card className="p-6 bg-primary/5 border-primary/20">
-              <div className="flex items-center justify-center gap-3 mb-3">
+              <div className="flex items-center gap-3 mb-3">
                 <Icon name="BadgeCheck" size={24} className="text-primary" />
                 <p className="text-lg font-semibold">Работаем по СНиП, ГОСТ и СанПиН</p>
               </div>
               <p className="text-muted-foreground">Соблюдаем все строительные нормы и правила. Полный пакет документов.</p>
+            </Card>
+            <Card className="p-6 bg-primary/5 border-primary/20">
+              <div className="flex items-center gap-3 mb-3">
+                <Icon name="Package" size={24} className="text-primary" />
+                <p className="text-lg font-semibold">Гибкая схема работы</p>
+              </div>
+              <p className="text-muted-foreground">Работаем с собственным материалом или по давальческой схеме из материала заказчика.</p>
             </Card>
           </div>
         </div>
@@ -57,7 +66,7 @@ export default function ServicesSection() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-heading mb-4">Пиломатериалы с собственной лесопилки</h2>
-            <p className="text-xl text-muted-foreground">Высокое качество по доступным ценам. Доставка манипулятором.</p>
+            <p className="text-xl text-muted-foreground">Высокое качество по доступным ценам. Доставка собственным манипулятором или собственным транспортом.</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
@@ -86,14 +95,20 @@ export default function ServicesSection() {
             <Card className="p-6">
               <div className="h-64 flex flex-col justify-center">
                 <Icon name="Truck" size={64} className="mx-auto text-primary mb-6" />
-                <h3 className="text-xl font-bold font-heading mb-2 text-center">Доставка манипулятором</h3>
-                <p className="text-muted-foreground text-center">Быстрая и удобная доставка пиломатериалов собственным транспортом в любую точку региона.</p>
-                <Button className="mt-6" size="lg" asChild>
-                  <a href="tel:+79109420777">
-                    <Icon name="Phone" size={20} className="mr-2" />
-                    Заказать доставку
-                  </a>
-                </Button>
+                <h3 className="text-xl font-bold font-heading mb-2 text-center">Доставка собственным транспортом</h3>
+                <p className="text-muted-foreground text-center">Быстрая и удобная доставка пиломатериалов собственным манипулятором или транспортом в любую точку региона.</p>
+                <div className="flex gap-3 mt-6">
+                  <Button className="flex-1" size="lg" asChild>
+                    <a href="tel:+79109420777">
+                      <Icon name="Phone" size={20} className="mr-2" />
+                      Позвонить
+                    </a>
+                  </Button>
+                  <Button className="flex-1" variant="outline" size="lg" onClick={() => document.getElementById('feedback')?.scrollIntoView({ behavior: 'smooth' })}>
+                    <Icon name="ShoppingCart" size={20} className="mr-2" />
+                    Заказать
+                  </Button>
+                </div>
               </div>
             </Card>
           </div>
