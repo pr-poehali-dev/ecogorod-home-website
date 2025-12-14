@@ -54,7 +54,7 @@ const advantages = [
   { icon: 'Shield', title: 'СНиП / ГОСТ', description: 'Соблюдение всех строительных норм' },
   { icon: 'Clock', title: 'Точные сроки', description: 'Строим в срок по договору' },
   { icon: 'Award', title: 'Опыт 15+ лет', description: 'Построено более 200 домов' },
-  { icon: 'Factory', title: 'Деревообрабатывающая линия', description: 'Низкие цены при высоком качестве' }
+  { icon: 'Factory', title: 'Своя лесопилка', description: 'Низкие цены при высоком качестве' }
 ];
 
 export default function HeroSection() {
@@ -87,7 +87,7 @@ export default function HeroSection() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-5xl md:text-6xl font-bold font-heading mb-6 leading-tight">
-                Строим дома <span className="text-primary">под ключ</span> в Московской области
+                Строим дома <span className="text-primary">под ключ</span> в Туле
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
                 Индивидуальное жилищное строительство с гарантией качества. Полный цикл работ от проекта до сдачи.
@@ -98,15 +98,15 @@ export default function HeroSection() {
                   Смотреть проекты
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg" asChild>
-                  <a href="tel:+79265500974">
+                  <a href="tel:+79109420777">
                     <Icon name="Phone" size={20} className="mr-2" />
-                    +7 (926) 550-09-74
+                    +7 (910) 942-07-77
                   </a>
                 </Button>
               </div>
               <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
                 <Icon name="CheckCircle2" size={18} className="text-primary" />
-                <span>Деревообрабатывающая линия — низкие цены при профессиональном качестве</span>
+                <span>Собственная лесопилка — низкие цены при профессиональном качестве</span>
               </div>
             </div>
             <div className="relative">
@@ -144,7 +144,7 @@ export default function HeroSection() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-heading mb-4">Наши проекты</h2>
-            <p className="text-xl text-muted-foreground">Хиты строительной компании БЭСТ</p>
+            <p className="text-xl text-muted-foreground">Хиты строительной компании ЭКОГОРОД</p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8 mb-12">
