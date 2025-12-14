@@ -100,7 +100,7 @@ export default function ServicesSection() {
                 <p className="text-muted-foreground text-center">Быстрая и удобная доставка пиломатериалов собственным манипулятором или транспортом в любую точку региона.</p>
                 <div className="flex gap-3 mt-6">
                   <Button className="flex-1" size="lg" asChild>
-                    <a href="tel:+79109420777">
+                    <a href="tel:+79265500974">
                       <Icon name="Phone" size={20} className="mr-2" />
                       Позвонить
                     </a>

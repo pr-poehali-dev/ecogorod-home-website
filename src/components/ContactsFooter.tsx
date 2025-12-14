@@ -70,7 +70,7 @@ export default function ContactsFooter() {
                   <Icon name="Phone" size={40} className="text-primary" />
                   <div>
                     <h3 className="font-bold font-heading mb-1">Телефон</h3>
-                    <a href="tel:+79109420777" className="text-xl text-primary story-link">+7 (910) 942-07-77</a>
+                    <a href="tel:+79265500974" className="text-xl text-primary story-link">+7 (926) 550-09-74</a>
                     <p className="text-sm text-muted-foreground mt-1">Ежедневно с 9:00 до 21:00</p>
                   </div>
                 </div>

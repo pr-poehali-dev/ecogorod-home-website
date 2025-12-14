@@ -98,9 +98,9 @@ export default function HeroSection() {
                   Смотреть проекты
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg" asChild>
-                  <a href="tel:+79109420777">
+                  <a href="tel:+79265500974">
                     <Icon name="Phone" size={20} className="mr-2" />
-                    +7 (910) 942-07-77
+                    +7 (926) 550-09-74
                   </a>
                 </Button>
               </div>
