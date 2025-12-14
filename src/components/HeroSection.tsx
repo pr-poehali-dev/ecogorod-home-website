@@ -54,7 +54,7 @@ const advantages = [
   { icon: 'Shield', title: 'СНиП / ГОСТ', description: 'Соблюдение всех строительных норм' },
   { icon: 'Clock', title: 'Точные сроки', description: 'Строим в срок по договору' },
   { icon: 'Award', title: 'Опыт 15+ лет', description: 'Построено более 200 домов' },
-  { icon: 'Factory', title: 'Своя лесопилка', description: 'Низкие цены при высоком качестве' }
+  { icon: 'Factory', title: 'Деревообрабатывающая линия', description: 'Низкие цены при высоком качестве' }
 ];
 
 export default function HeroSection() {
@@ -106,7 +106,7 @@ export default function HeroSection() {
               </div>
               <div className="mt-6 flex items-center gap-3 text-sm text-muted-foreground">
                 <Icon name="CheckCircle2" size={18} className="text-primary" />
-                <span>Собственная лесопилка — низкие цены при профессиональном качестве</span>
+                <span>Деревообрабатывающая линия — низкие цены при профессиональном качестве</span>
               </div>
             </div>
             <div className="relative">
@@ -144,7 +144,7 @@ export default function HeroSection() {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold font-heading mb-4">Наши проекты</h2>
-            <p className="text-xl text-muted-foreground">Хиты строительной компании ЭКОГОРОД</p>
+            <p className="text-xl text-muted-foreground">Хиты строительной компании БЭСТ</p>
           </div>
           
           <div className="grid lg:grid-cols-2 gap-8 mb-12">

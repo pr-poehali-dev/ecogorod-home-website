@@ -9,7 +9,7 @@ export default function Header() {
           <div className="flex items-center gap-2">
             <Icon name="Home" size={32} className="text-primary" />
             <div>
-              <h1 className="text-xl font-bold font-heading">ЭКОГОРОД</h1>
+              <h1 className="text-xl font-bold font-heading">БЭСТ</h1>
               <p className="text-xs text-muted-foreground">Строим дома под ключ</p>
             </div>
           </div>

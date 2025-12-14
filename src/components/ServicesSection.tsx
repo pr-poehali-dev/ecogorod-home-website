@@ -66,7 +66,7 @@ export default function ServicesSection() {
       <section id="lumber" className="py-20 px-4">
         <div className="container mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold font-heading mb-4">Пиломатериалы с собственной лесопилки</h2>
+            <h2 className="text-4xl font-bold font-heading mb-4">Пиломатериалы с деревообрабатывающей линии</h2>
             <p className="text-xl text-muted-foreground">Высокое качество по доступным ценам. Доставка собственным манипулятором или собственным транспортом.</p>
           </div>
 
@@ -90,7 +90,7 @@ export default function ServicesSection() {
                 className="w-full h-64 object-cover rounded-lg mb-4"
               />
               <h3 className="text-xl font-bold font-heading mb-2">Качественные материалы</h3>
-              <p className="text-muted-foreground">Вся продукция производится на собственной лесопилке с соблюдением технологии сушки и обработки.</p>
+              <p className="text-muted-foreground">Вся продукция производится на деревообрабатывающей линии с соблюдением технологии сушки и обработки.</p>
             </Card>
             
             <Card className="p-6">

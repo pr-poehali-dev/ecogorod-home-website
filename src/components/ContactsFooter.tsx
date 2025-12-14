@@ -81,7 +81,7 @@ export default function ContactsFooter() {
                   <Icon name="Mail" size={40} className="text-primary" />
                   <div>
                     <h3 className="font-bold font-heading mb-1">Email</h3>
-                    <a href="mailto:info@ecogorod-tula.ru" className="text-primary story-link">info@ecogorod-tula.ru</a>
+                    <a href="mailto:ots-d@yandex.ru" className="text-primary story-link">ots-d@yandex.ru</a>
                     <p className="text-sm text-muted-foreground mt-1">Ответим в течение часа</p>
                   </div>
                 </div>
