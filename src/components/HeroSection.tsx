@@ -87,7 +87,7 @@ export default function HeroSection() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-5xl md:text-6xl font-bold font-heading mb-6 leading-tight">
-                Строим дома <span className="text-primary">под ключ</span> в Туле
+                Строим дома <span className="text-primary">под ключ</span> в Московской области
               </h2>
               <p className="text-xl text-muted-foreground mb-8">
                 Индивидуальное жилищное строительство с гарантией качества. Полный цикл работ от проекта до сдачи.

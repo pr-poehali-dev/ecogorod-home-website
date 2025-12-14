@@ -92,8 +92,8 @@ export default function ContactsFooter() {
                   <Icon name="MapPin" size={40} className="text-primary" />
                   <div>
                     <h3 className="font-bold font-heading mb-1">Офис</h3>
-                    <p className="text-sm">300013, Тульская область</p>
-                    <p className="text-sm">г. Тула, ул. Ш. Руставели, д. 1/13</p>
+                    <p className="text-sm">119048, г. Москва</p>
+                    <p className="text-sm">ул. Ефремова, д. 19, к. 1</p>
                   </div>
                 </div>
               </Card>
@@ -101,7 +101,7 @@ export default function ContactsFooter() {
 
             <Card className="p-0 overflow-hidden">
               <iframe
-                src="https://yandex.ru/map-widget/v1/?ll=37.618423%2C54.193122&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE3NzMxMhJP0KDQvtGB0YHQuNGPLCDQotGD0LvQsCwg0YPQu9C40YbQsCDQqNC-0YLQsCDQoNGD0YHRgtCw0LLQtdC70LgsIDEvMTMiCg1e2jVCFUJtXkI%2C&z=17"
+                src="https://yandex.ru/map-widget/v1/?ll=37.573856%2C55.729167&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgoxNTU3NzI0OTQwEmvQoNC-0YHRgdC40Y8sINCc0L7RgdC60LLQsCwg0YPQu9C40YbQsCDQldGE0YDQtdC80L7QstCwLCAxOSDQutC-0YDQv9GD0YEgMSIKDa4RWEIVHltcQg%2C%2C&z=17"
                 width="100%"
                 height="100%"
                 frameBorder="0"
@@ -121,12 +121,12 @@ export default function ContactsFooter() {
               <div className="flex items-center gap-2 mb-4">
                 <Icon name="Home" size={32} className="text-primary" />
                 <div>
-                  <h3 className="text-xl font-bold font-heading">ЭКОГОРОД</h3>
+                  <h3 className="text-xl font-bold font-heading">БЭСТ</h3>
                   <p className="text-xs text-muted-foreground">Строим дома под ключ</p>
                 </div>
               </div>
               <p className="text-sm text-muted-foreground">
-                Индивидуальное жилищное строительство в Туле и области. Полный цикл работ от проекта до сдачи.
+                Индивидуальное жилищное строительство в Московской области. Полный цикл работ от проекта до сдачи.
               </p>
             </div>
             
@@ -144,16 +144,22 @@ export default function ContactsFooter() {
             <div>
               <h4 className="font-bold font-heading mb-4">Реквизиты</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>ООО "ЭКОГОРОД"</li>
-                <li>ИНН: 7104078910</li>
-                <li>300013, Тульская область</li>
-                <li>г. Тула, ул. Ш. Руставели, д. 1/13</li>
+                <li>ООО "БЭСТ"</li>
+                <li>ИНН/КПП: 9704054224/770401001</li>
+                <li>ОГРН: 1217700123300</li>
+                <li>119048, г. Москва, вн. тер. г. муниципальный округ Хамовники</li>
+                <li>ул. Ефремова, д. 19, к. 1, эт./пом. 1/I, ком. 3</li>
+                <li>Тел.: +7 (926) 550-09-74</li>
+                <li className="pt-2 border-t border-muted-foreground/20 mt-2">Банк: АО «АЛЬФА-БАНК»</li>
+                <li>р/с: 40702810502370006185</li>
+                <li>к/с: 30101810200000000593</li>
+                <li>БИК: 044525593</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t pt-8 text-center text-sm text-muted-foreground">
-            <p>© 2025 ООО "ЭКОГОРОД". Все права защищены.</p>
+            <p>© 2025 ООО "БЭСТ". Все права защищены.</p>
           </div>
         </div>
       </footer>
